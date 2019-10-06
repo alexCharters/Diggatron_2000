@@ -9,7 +9,9 @@ from keras.optimizers import Adam
 from keras.layers.core import Activation, Flatten, Dropout, Dense
 from keras.callbacks import ModelCheckpoint
 from sklearn.metrics import classification_report, confusion_matrix
+import numpy as np
 import pandas as pd
+import glob
 
 from datetime import datetime
 
@@ -21,23 +23,14 @@ INIT_LR = .01
 EPOCHS = 80
 BATCH_SIZE = 32
 
-# train_datagen = ImageDataGenerator(
-#     rotation_range=0,
-#     width_shift_range=0.1,
-#     height_shift_range=0.1,
-#     zoom_range=0.2,
-#     fill_mode='nearest'
-# )
+train_datagen = ImageDataGenerator()
 
-# test_datagen = ImageDataGenerator(
-#     rotation_range=0,
-#     zoom_range=0.1,
-#     fill_mode='nearest'
-# )
+
+test_datagen = ImageDataGenerator()
 
 #img = load_img('')
 # conv layers for image
-imgInput = Input(shape=(W, H, 3))
+imgInput = Input(shape=(H, W, 3))
 
 conv2D = Conv2D(96, (11, 11), strides=4, padding="same")(imgInput)
 maxPool = MaxPooling2D(3, 2)(conv2D)
@@ -61,7 +54,7 @@ flat = Flatten()(dropOut3)
 
 
 # dense layers for extra data
-extraInput = Input(shape=(2,))
+extraInput = Input(shape=(3,))
 extraDense1 = Dense(10, activation="relu")(extraInput)
 merge = concatenate([flat, extraDense1])
 
@@ -77,10 +70,10 @@ print(model.summary())
 #plot_model(model, to_file='model.png')
 
 #load data into a panda data frame
-train_meta = pd.read_csv("specs/train_metadata.csv",usecols=['Name','Spectral_Center','Cross_Rate'])
+train_meta = pd.read_csv("specs/train_metadata.csv",usecols=['Spectral_Center','Cross_Rate', 'RMS'])
 train_outData = pd.read_csv("specs/train_metadata.csv", usecols=['Nothing','BP1','BP2'])
 
-test_meta = pd.read_csv("specs/test_metadata.csv",usecols=['Name','Spectral_Center','Cross_Rate'])
+test_meta = pd.read_csv("specs/test_metadata.csv",usecols=['Spectral_Center','Cross_Rate', 'RMS'])
 test_outData = pd.read_csv("specs/test_metadata.csv", usecols=['Nothing','BP1','BP2'])
 # print(meta)
 # print(outData)
@@ -109,13 +102,23 @@ checkpoint = ModelCheckpoint(filepath, monitor='val_accuracy', verbose=1, save_b
 #     target_size=(240, 160),
 #     batch_size=BATCH_SIZE
 # )
+train_imgs = []
+train_metadata = []
 
+test_imgs = []
+test_metadata = []
+for filename in glob.glob('specs/train/*.png'):
+    train_imgs.append(img_to_array(load_img(filename)))
+
+for filename in glob.glob('specs/test/*.png'):
+    test_imgs.append(img_to_array(load_img(filename)))
 
 model.fit_generator(
-    generator=training_datagen,
+    generator=train_datagen.flow((np.array(train_imgs), train_meta), train_outData, batch_size=BATCH_SIZE),
     epochs=EPOCHS,
-    validation_data=testing_datagen,
-    #callbacks=[checkpoint]
+    steps_per_epoch=7,
+    validation_data=test_datagen.flow((np.array(test_imgs), test_meta), test_outData),
+    callbacks=[checkpoint]
 )
 
 #save final weights
