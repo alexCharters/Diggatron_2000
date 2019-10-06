@@ -61,7 +61,7 @@ flat = Flatten()(dropOut3)
 
 
 # dense layers for extra data
-extraInput = Input(shape=(3,))
+extraInput = Input(shape=(2,))
 extraDense1 = Dense(10, activation="relu")(extraInput)
 merge = concatenate([flat, extraDense1])
 
