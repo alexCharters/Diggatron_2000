@@ -74,7 +74,7 @@ model = Model(inputs=[imgInput, extraInput], outputs=output)
 
 print(model.summary())
 #hello this is my code. I can code good see Do_the_thing("motivation");
-plot_model(model, to_file='model.png')
+#plot_model(model, to_file='model.png')
 
 #load data into a panda data frame
 meta = pd.read_csv("specs/metadata.csv",usecols=['Name','Spectral_Center','Cross_Rate'])

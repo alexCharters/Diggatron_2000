@@ -30,7 +30,7 @@ class DataGenerator(keras.utils.Sequence):
         print(rows.head())
         names = rows['Name']
         # Find list of IDs
-        img_files_temp = [names.iloc(k) for k in range(index*self.batch_size, (index+1)*self.batch_size) if ((index+1)*self.batch_size) < row.count)]
+        img_files_temp = [names.iloc(k) for k in range(index*self.batch_size, (index+1)*self.batch_size)]
         #create batch item list
         x_batch_list = np.array([])
         y_batch_list = np.array([])
