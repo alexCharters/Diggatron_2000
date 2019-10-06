@@ -17,6 +17,7 @@ class create_data():
             for f in files:
                 # load audio file
                 data, sampling_rate = librosa.load("./all_samples/test/"+f)
+                print(sampling_rate)
                 # create figure, remove borders
                 fig = plt.figure(figsize=(12, 4))
                 ax = fig.add_axes([0, 0, 1, 1])
@@ -57,7 +58,7 @@ class create_data():
 
     @staticmethod
     def generate_metadata():
-        cols = ['Name', 'Spectral_Center', 'Cross_Rate', 'Nothing', 'BP1', 'BP2']
+        cols = ['Name', 'Spectral_Center', 'Cross_Rate', 'RMS', 'Nothing', 'BP1', 'BP2']
 
         # TRAINING
         metadata = pd.DataFrame(columns=cols)
@@ -66,6 +67,7 @@ class create_data():
                 data, sampling_rate = librosa.load("./all_samples/train/"+f)
                 spectral_centroid = np.average(librosa.feature.spectral_centroid(data, sampling_rate))
                 zero_crossing_rate = np.average(librosa.feature.zero_crossing_rate(data, sampling_rate))
+                rms = np.average(librosa.feature.rms(y=data))
 
                 label = f[0:3]
                 if label == "bp1":
@@ -75,7 +77,7 @@ class create_data():
                 else:
                     label = [1, 0, 0]
 
-                row = pd.DataFrame([f[:-4] + ".png", spectral_centroid, zero_crossing_rate, label[0], label[1], label[2]])
+                row = pd.DataFrame([f[:-4] + ".png", spectral_centroid, zero_crossing_rate, rms, label[0], label[1], label[2]])
                 row = row.T
                 row.columns = cols
                 metadata = metadata.append(row)
@@ -89,6 +91,7 @@ class create_data():
                 data, sampling_rate = librosa.load("./all_samples/test/" + f)
                 spectral_centroid = np.average(librosa.feature.spectral_centroid(data, sampling_rate))
                 zero_crossing_rate = np.average(librosa.feature.zero_crossing_rate(data, sampling_rate))
+                rms = np.average(librosa.feature.rms(y=data))
 
                 label = f[0:3]
                 if label == "bp1":
@@ -99,13 +102,14 @@ class create_data():
                     label = [1, 0, 0]
 
                 row = pd.DataFrame(
-                    [f[:-4] + ".png", spectral_centroid, zero_crossing_rate, label[0], label[1], label[2]])
+                    [f[:-4] + ".png", spectral_centroid, zero_crossing_rate, rms, label[0], label[1], label[2]])
                 row = row.T
                 row.columns = cols
                 metadata = metadata.append(row)
         print(metadata)
         metadata.to_csv('./specs/test/metadata.csv')
 
+
 if __name__ == "__main__":
-    create_data.create_spectrograms()
+    # create_data.create_spectrograms()
     create_data.generate_metadata()
