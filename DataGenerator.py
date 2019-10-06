@@ -1,4 +1,4 @@
-
+import os
 from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
 from keras.DateFrame import to_numpy
 
@@ -23,7 +23,7 @@ class DataGenerator(keras.utils.Sequence):
 
     def __len__(self):
         """Denotes the number of batches per epoch."""
-        return int(np.floor(len(self.img_files) / self.batch_size))
+        return len(name for name in os.listdir(self.imgs_dir) if os.path.isfile(slef.imgs_dir+'//'+name))
 
     def __getitem__(self, index):
         """Generate one batch of data."""
