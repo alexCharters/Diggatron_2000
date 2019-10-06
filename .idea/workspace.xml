@@ -1,11 +1,539 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d180b6a-a726-4438-bd71-ba6abe80e9a3" name="Default Changelist" comment="create_spectrograms.py completed. All spectrograms generated and added to /specs">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6d180b6a-a726-4438-bd71-ba6abe80e9a3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-01-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-01-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-01-003.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-01.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-02-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-02-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-02-003.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-02.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-03-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-03-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-03-003.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-03.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-04-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-04-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-04-003.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-04.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-05-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-05-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-05-003.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-05.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-06-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-06-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-06-003.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-06.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-07-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-07-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-07-003.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-07.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-08-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-08-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-08-003.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-08.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-09-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-09-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-09-003.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-09.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-10-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-10-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-10-003.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-10.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-11-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-11-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-11-003.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-11.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-12-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-12-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-12-003.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-12.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-13-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-13-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-13.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-14-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-14-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-14.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-15-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-15-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-15.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-16-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-16.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-17-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-17.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-18-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-18.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-19.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-20.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-21.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-22.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-23.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-24.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-25.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-26.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-27.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-28.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-29.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-30.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-31.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-32.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-33.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-34.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-35.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-36.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-questionable-01.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-questionable-02.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-questionable-03.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-questionable-04.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-questionable-05.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-questionable-06.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-questionable-07.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-questionable-08.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-questionable-09.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp1-questionable-10.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-01-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-01-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-01-003.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-01.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-02-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-02-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-02-003.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-02.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-03-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-03-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-03-003.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-03.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-04-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-04-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-04-003.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-04.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-05-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-05-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-05.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-06-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-06-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-06.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-07-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-07-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-07.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-08-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-08-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-08.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-09-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-09-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-09.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-10-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-10-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-10.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-11-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-11-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-11.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-12-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-12-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-12.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-13-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-13-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-13.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-14-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-14-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-14.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-15-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-15.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-16-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-16.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-17.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-18.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-19.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-20.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-21.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-22.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-23.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-24.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-25.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-26.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-27.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-28.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-29.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-30.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-31.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-32.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-33.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-34.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-35.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/bp2-36.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-01-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-01-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-01.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-02-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-02-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-02.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-03-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-03-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-03.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-04-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-04-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-04.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-05-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-05-002.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-05.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-06-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-06.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-07-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-07.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-08-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-08.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-09-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-09.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-10-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-10.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-11-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-11.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-12-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-12.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-13-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-13.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-14-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-14.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-15-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-15.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-16-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-16.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-17-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-17.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-18-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-18.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-19-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-19.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-20-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-20.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-21-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-21.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-22-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-22.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-23-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-23.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-24-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-24.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-25-001.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-25.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-26.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-27.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-28.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-29.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-30.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-31.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-32.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-33.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-34.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-35.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-36.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-37.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-38.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-39.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-40.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-41.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-42.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-43.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-44.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-45.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-46.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-47.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-48.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-49.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-50.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-51.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-52.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-53.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-54.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-55.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-56.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-57.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-58.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-59.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-60.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-61.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-62.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-63.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-64.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-65.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-66.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-67.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-68.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-69.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-70.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-71.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-72.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-73.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_samples/nothing-74.wav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/create_spectrograms.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_spectrograms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nothing-74.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/specs/metadata.csv" beforeDir="false" afterPath="$PROJECT_DIR$/specs/metadata.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-01-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-01-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-01-003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-02-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-02-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-02-003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-03-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-03-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-03-003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-04-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-04-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-04-003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-05-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-05-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-05-003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-06-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-06-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-06-003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-07-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-07-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-07-003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-08-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-08-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-08-003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-09-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-09-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-09-003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-10-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-10-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-10-003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-11-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-11-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-11-003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-12-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-12-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-12-003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-13-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-13-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-14-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-14-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-15-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-15-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-16-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-17-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-18-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-questionable-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-questionable-02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-questionable-03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-questionable-04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-questionable-05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-questionable-06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-questionable-07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-questionable-08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-questionable-09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp1-questionable-10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-01-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-01-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-01-003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-02-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-02-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-02-003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-03-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-03-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-03-003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-04-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-04-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-04-003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-05-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-05-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-06-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-06-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-07-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-07-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-08-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-08-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-09-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-09-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-10-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-10-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-11-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-11-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-12-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-12-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-13-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-13-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-14-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-14-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-15-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-16-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/bp2-36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/metadata.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-01-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-01-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-02-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-02-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-03-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-03-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-04-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-04-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-05-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-05-002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-06-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-07-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-08-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-09-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-10-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-11-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-12-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-13-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-14-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-15-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-16-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-17-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-18-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-19-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-20-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-21-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-22-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-23-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-24-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-25-001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-42.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-43.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-45.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-46.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-47.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-49.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-51.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-52.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-53.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-54.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-55.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-56.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-58.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-61.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-62.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-63.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-65.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-66.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-67.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-68.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-69.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-70.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-71.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-73.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/nothing-74.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +548,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/classifier.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1827">
-                  <caret line="87" column="48" lean-forward="true" selection-start-line="87" selection-start-column="48" selection-end-line="87" selection-end-column="48" />
+                <state relative-caret-position="1743">
+                  <caret line="83" selection-start-line="83" selection-end-line="83" />
                   <folding>
                     <element signature="e#0#34#0" expanded="true" />
                   </folding>
@@ -32,8 +560,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/create_spectrograms.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="513">
-                  <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+                <state relative-caret-position="462">
+                  <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
                   <folding>
                     <element signature="e#0#22#0" expanded="true" />
                   </folding>
@@ -45,23 +573,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/DataGenerator.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="231">
-                  <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/specs/metadata.csv">
-              <provider editor-type-id="csv-table-editor">
-                <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-              </provider>
-              <provider selected="true" editor-type-id="csv-text-editor">
-                <state relative-caret-position="147">
-                  <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+                <state relative-caret-position="294">
+                  <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
@@ -81,7 +597,11 @@
     <findStrings>
       <find>csv</find>
       <find>png</find>
+      <find>test</find>
     </findStrings>
+    <replaceStrings>
+      <replace>train</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -121,7 +641,12 @@
             <path>
               <item name="Diggatron_2000" type="b2602c69:ProjectViewProjectNode" />
               <item name="Diggatron_2000" type="462c0819:PsiDirectoryNode" />
-              <item name="sounds" type="462c0819:PsiDirectoryNode" />
+              <item name="all_samples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diggatron_2000" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diggatron_2000" type="462c0819:PsiDirectoryNode" />
+              <item name="specs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Diggatron_2000" type="b2602c69:ProjectViewProjectNode" />
@@ -242,15 +767,21 @@
       <option name="project" value="LOCAL" />
       <updated>1570332261860</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Creates metadata csv">
+      <created>1570336154573</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1570336154573</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1653" height="896" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.2704208" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2704208" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -258,7 +789,7 @@
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.32984293" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.32591623" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32984293" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.32984293" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -290,7 +821,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added create_spectrograms.py" />
     <MESSAGE value="create_spectrograms.py completed. All spectrograms generated and added to /specs" />
-    <option name="LAST_COMMIT_MESSAGE" value="create_spectrograms.py completed. All spectrograms generated and added to /specs" />
+    <MESSAGE value="Creates metadata csv" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creates metadata csv" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/librosa/core/audio.py">
@@ -409,18 +941,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1827">
-          <caret line="87" column="48" lean-forward="true" selection-start-line="87" selection-start-column="48" selection-end-line="87" selection-end-column="48" />
+        <state relative-caret-position="1743">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -449,7 +974,7 @@
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="147">
+        <state relative-caret-position="-168">
           <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
         </state>
       </provider>
@@ -459,10 +984,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DataGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/specs/train/metadata.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/specs/train/bp2-11.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/specs/test/metadata.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/create_spectrograms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="462">
+          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
