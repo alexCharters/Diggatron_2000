@@ -7,6 +7,7 @@ from keras.layers.convolutional import Conv2D, MaxPooling2D
 from keras.layers.normalization import BatchNormalization
 from keras.optimizers import Adam
 from keras.layers.core import Activation, Flatten, Dropout, Dense
+import pandas as pd
 
 W = 120
 H = 60
@@ -53,3 +54,9 @@ model = Model(inputs=[imgInput, extraInput], outputs=output)
 print(model.summary())
 #hello this is my code. I can code good see Do_the_thing("motivation");
 plot_model(model, to_file='model.png')
+
+#load data into a panda data frame
+meta = pd.read_csv("metaData.csv",usecols=['Center','Rate'])
+outData = pd.read_csv("metaData.csv", usecols=['Nothing','BP1','BP2'])
+print(meta)
+print(outData)
