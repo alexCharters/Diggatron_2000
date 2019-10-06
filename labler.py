@@ -7,7 +7,7 @@ import numpy as np
 #load in the weights from a trained set
 model = create_model()
 model.load_weights("weights-improvement-best.hdf5")
-
+metaIn = np.FromFile('specs/test_metadata.csv')
 #load in a test image and it's parameters
 img_name = 'bp1-01-001.png'
 img = load_img("specs/test/" + img_name)
@@ -18,6 +18,8 @@ img_array = img_to_array(img)
 #evaluate it with the model
 
 pred = model.predict(img)
+
+print(pred)
 
 
 
