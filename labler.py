@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import os
 
+successes, fails = 0,0
 #make a model and load weights
 
 model = model_from_json(open('model.json').read())
@@ -24,8 +25,26 @@ for root, dirs, files in os.walk("./specs/test"):
 
         pred = model.predict([np.expand_dims(img_array, axis=0), row.iloc[1:4].values.reshape(1, 3)])
 
-        print(file)
-        print(pred)
+        idx = np.argmax(pred, axis=1)
+        #check nothing
+        if(row.Nothing == 1 and idx == 0):
+            print('Not digging: Success!')
+            successes += 1
+            #check BP1
+        elif (row.BP1 == 1 and idx == 1):
+            print('Digging soft soil: Success!')
+            successes += 1
+        elif (row.BP2 == 1 and idx == 2):
+            print('Digging gravel: Success!')
+            successes += 1
+        else:
+            print("FAILURE!")
+            fails += 1
+
+        # print(file)
+        # print(pred)
+
+print("Performance: " + str(successes/(successes + fails)*100))
 
 
 
