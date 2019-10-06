@@ -20,7 +20,7 @@ from DataGenerator import DataGenerator
 W = 240
 H = 160
 INIT_LR = .01
-EPOCHS = 80
+EPOCHS = 100
 BATCH_SIZE = 32
 
 train_datagen = ImageDataGenerator()
@@ -131,7 +131,7 @@ train_output = np.array(train_output)
 model.fit_generator(
     generator=train_datagen.flow((train_imgs, train_metadata), train_output, batch_size=BATCH_SIZE),
     epochs=EPOCHS,
-    steps_per_epoch=7,
+    steps_per_epoch=8,
     validation_data=test_datagen.flow((test_imgs, test_metadata), test_output),
     callbacks=[checkpoint]
 )
@@ -142,8 +142,11 @@ model.save_weights('final_weights_'+now.strftime("%m_%d_%Y_%H_%M_%S")+'.h5')
 
 # evaluating model
 
+validation_generator = test_datagen.flow((test_imgs, test_metadata), test_output)
+
 # run on testing data
-Y_pred = model.predict_generator(validation_generator, num_of_test_samples // BATCH_SIZE+1)
+Y_pred = model.predict_generator(validation_generator, 250 // BATCH_SIZE+1)
 y_pred = np.argmax(Y_pred, axis=1)
 
-#print(confusion_matrix([, , ], y_pred))
+print(confusion_matrix(validation_generator.classes, y_pred))
+print(classification_report(validation_generator.classes, y_pred))
