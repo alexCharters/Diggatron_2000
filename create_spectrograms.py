@@ -1,6 +1,7 @@
 import librosa.display
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 import os
 from PIL import Image
 
@@ -50,7 +51,28 @@ class create_data():
 
     @staticmethod
     def generate_metadata():
-        pass
+        cols = ['Name', 'Spectral_Center', 'Cross_Rate', 'Nothing', 'BP1', 'BP2']
+        metadata = pd.DataFrame(columns=cols)
+        for root, dirs, files in os.walk("./all_samples/"):
+            for f in files:
+                data, sampling_rate = librosa.load("./all_samples/"+f)
+                spectral_centroid = np.average(librosa.feature.spectral_centroid(data, sampling_rate))
+                zero_crossing_rate = np.average(librosa.feature.zero_crossing_rate(data, sampling_rate))
+
+                label = f[0:3]
+                if label == "bp1":
+                    label = [0, 1, 0]
+                elif label == "bp2":
+                    label = [0, 0, 1]
+                else:
+                    label = [1, 0, 0]
+
+                row = pd.DataFrame([f[:-4] + ".png", spectral_centroid, zero_crossing_rate, label[0], label[1], label[2]])
+                row = row.T
+                row.columns = cols
+                metadata = metadata.append(row)
+        print(metadata)
+        metadata.to_csv('./specs/metadata.csv')
 
 
 if __name__ == "__main__":
