@@ -140,13 +140,13 @@ model.fit_generator(
 now = datetime.now()
 model.save_weights('final_weights_'+now.strftime("%m_%d_%Y_%H_%M_%S")+'.h5')
 
-# evaluating model
+# # evaluating model
 
-validation_generator = test_datagen.flow((test_imgs, test_metadata), test_output)
+# validation_generator = test_datagen.flow((test_imgs, test_metadata), test_output)
 
-# run on testing data
-Y_pred = model.predict_generator(validation_generator, 250 // BATCH_SIZE+1)
-y_pred = np.argmax(Y_pred, axis=1)
+# # run on testing data
+# Y_pred = model.predict_generator(validation_generator, 250 // BATCH_SIZE+1)
+# y_pred = np.argmax(Y_pred, axis=1)
 
-print(confusion_matrix(validation_generator.classes, y_pred))
-print(classification_report(validation_generator.classes, y_pred))
+# print(confusion_matrix(validation_generator.classes, y_pred))
+# print(classification_report(validation_generator.classes, y_pred))
