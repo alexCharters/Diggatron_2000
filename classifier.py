@@ -10,25 +10,27 @@ from keras.layers.core import Activation, Flatten, Dropout, Dense
 
 from datetime import datetime
 
+from DataGenerator import DataGenerator
+
 W = 240
 H = 160
 INIT_LR = .01
 EPOCHS = 80
 BATCH_SIZE = 32
 
-train_datagen = ImageDataGenerator(
-    rotation_range=0,
-    width_shift_range=0.1,
-    height_shift_range=0.1,
-    zoom_range=0.2,
-    fill_mode='nearest'
-)
+# train_datagen = ImageDataGenerator(
+#     rotation_range=0,
+#     width_shift_range=0.1,
+#     height_shift_range=0.1,
+#     zoom_range=0.2,
+#     fill_mode='nearest'
+# )
 
-test_datagen = ImageDataGenerator(
-    rotation_range=0,
-    zoom_range=0.1,
-    fill_mode='nearest'
-)
+# test_datagen = ImageDataGenerator(
+#     rotation_range=0,
+#     zoom_range=0.1,
+#     fill_mode='nearest'
+# )
 
 #img = load_img('')
 # conv layers for image
@@ -70,17 +72,17 @@ model.compile(loss='categorical_crossentropy',
               optimizer=opt,
               metrics=['accuracy'])
 
-train_generator = train_datagen.flow_from_directory(
-    'specs/train',
-    target_size=(240, 160),
-    batch_size=BATCH_SIZE
-)
+# train_generator = train_datagen.flow_from_directory(
+#     'specs/train',
+#     target_size=(240, 160),
+#     batch_size=BATCH_SIZE
+# )
 
-test_generator = train_datagen.flow_from_directory(
-    'specs/test',
-    target_size=(240, 160),
-    batch_size=BATCH_SIZE
-)
+# test_generator = train_datagen.flow_from_directory(
+#     'specs/test',
+#     target_size=(240, 160),
+#     batch_size=BATCH_SIZE
+# )
 
 
 # model.fit(
@@ -93,3 +95,23 @@ test_generator = train_datagen.flow_from_directory(
 
 now = datetime.now()
 model.save_weights('final_weights_'+now.strftime("%m_%d_%Y_%H_%M_%S")+'.h5')
+
+
+def generate_generator_multiple(generator,images_dir, dir2, batch_size, img_height,img_width):
+    genX1 = generator.flow_from_directory(dir1,
+                                          target_size = (img_height,img_width),
+                                          class_mode = 'categorical',
+                                          batch_size = batch_size,
+                                          shuffle=False, 
+                                          seed=7)
+    
+    genX2 = generator.flow_from_dataframe(dir2,
+                                          target_size = (img_height,img_width),
+                                          class_mode = 'categorical',
+                                          batch_size = batch_size,
+                                          shuffle=False, 
+                                          seed=7)
+    while True:
+            X1i = genX1.next()
+            X2i = genX2.next()
+            yield [X1i[0], X2i[0]], X2i[1]  #Yield both images and their mutual label
