@@ -8,7 +8,7 @@ from keras.layers.normalization import BatchNormalization
 from keras.optimizers import Adam
 from keras.layers.core import Activation, Flatten, Dropout, Dense
 from keras.callbacks import ModelCheckpoint
-from sklearn.metrics import classification_report, confusion_matrix
+from sklearn import preprocessing
 import numpy as np
 import pandas as pd
 import glob
@@ -19,11 +19,12 @@ from DataGenerator import DataGenerator
 
 W = 240
 H = 160
-INIT_LR = .01
+INIT_LR = .02
 EPOCHS = 100
 BATCH_SIZE = 32
 
 train_datagen = ImageDataGenerator()
+
 
 
 test_datagen = ImageDataGenerator()
@@ -109,14 +110,28 @@ train_output = []
 test_imgs = []
 test_metadata = []
 test_output = []
+
+specMax = 2300
+crossMax = 0.65
+rmsMax = 0.4
 for filename in glob.glob('specs/train/*.png'):
-    train_imgs.append(img_to_array(load_img(filename)))
-    train_metadata.append(train_meta.loc[train_meta['Name'] == filename.replace('\\', '/').split('/')[2]].values[0][1:])
+    train_imgs.append(img_to_array(load_img(filename))/255)
+    meta = train_meta.loc[train_meta['Name'] == filename.replace('\\', '/').split('/')[2]]
+    meta = meta.assign(Spectral_Center=lambda x: meta['Spectral_Center'] / specMax)
+    meta = meta.assign(Cross_Rate=lambda x: meta['Cross_Rate'] / crossMax)
+    meta = meta.assign(RMS=lambda x: meta['RMS'] / rmsMax)
+
+    train_metadata.append(meta.values[0][1:])
     train_output.append(train_outData.loc[train_outData['Name'] == filename.replace('\\', '/').split('/')[2]].values[0][1:])
 
 for filename in glob.glob('specs/test/*.png'):
-    test_imgs.append(img_to_array(load_img(filename)))
-    test_metadata.append(test_meta.loc[test_meta['Name'] == filename.replace('\\', '/').split('/')[2]].values[0][1:])
+    test_imgs.append(img_to_array(load_img(filename))/255)
+    meta = test_meta.loc[test_meta['Name'] == filename.replace('\\', '/').split('/')[2]]
+    meta = meta.assign(Spectral_Center=lambda x: meta['Spectral_Center'] / specMax)
+    meta = meta.assign(Cross_Rate=lambda x: meta['Cross_Rate'] / crossMax)
+    meta = meta.assign(RMS=lambda x: meta['RMS'] / rmsMax)
+
+    test_metadata.append(meta.values[0][1:])
     test_output.append(test_outData.loc[test_outData['Name'] == filename.replace('\\', '/').split('/')[2]].values[0][1:])
 
 test_imgs = np.array(test_imgs)
@@ -126,12 +141,14 @@ test_output = np.array(test_output)
 train_imgs = np.array(train_imgs)
 train_metadata = np.array(train_metadata)
 train_output = np.array(train_output)
+print(train_imgs)
+print(test_metadata)
 
 
 model.fit_generator(
     generator=train_datagen.flow((train_imgs, train_metadata), train_output, batch_size=BATCH_SIZE),
     epochs=EPOCHS,
-    steps_per_epoch=8,
+    steps_per_epoch=7,
     validation_data=test_datagen.flow((test_imgs, test_metadata), test_output),
     callbacks=[checkpoint]
 )
