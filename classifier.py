@@ -77,8 +77,8 @@ print(model.summary())
 plot_model(model, to_file='model.png')
 
 #load data into a panda data frame
-meta = pd.read_csv("metaData.csv",usecols=['Center','Rate'])
-outData = pd.read_csv("metaData.csv", usecols=['Nothing','BP1','BP2'])
+meta = pd.read_csv("specs/metadata.csv",usecols=['Name','Spectral_Center','Cross_Rate'])
+outData = pd.read_csv("specs/metadata.csv", usecols=['Nothing','BP1','BP2'])
 # print(meta)
 # print(outData)
 
@@ -111,7 +111,6 @@ checkpoint = ModelCheckpoint(filepath, monitor='val_accuracy', verbose=1, save_b
 model.fit_generator(
     generator=training_datagen,
     epochs=EPOCHS,
-    batch_size=BATCH_SIZE,
     validation_data=testing_datagen,
     callbacks=[checkpoint]
 )
