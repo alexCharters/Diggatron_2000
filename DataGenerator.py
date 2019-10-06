@@ -1,6 +1,8 @@
 import os
+import keras
 from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
-from keras.DateFrame import to_numpy
+import pandas as pd
+import numpy as np
 
 class DataGenerator(keras.utils.Sequence):
     """Generates data for Keras."""
@@ -23,15 +25,20 @@ class DataGenerator(keras.utils.Sequence):
     def __getitem__(self, index):
         """Generate one batch of data."""
         # Generate indexes of the batch
-        indexes = self.indexes[index*self.batch_size:(index+1)*self.batch_size]
-
+        rows = self.metadata_dataframe[index*self.batch_size:(index+1)*self.batch_size]
+        names = rows['Name']
         # Find list of IDs
-        img_files_temp = [self.img_files[k] for k in indexes]
+        img_files_temp = [names.iloc(k) for k in index*self.batch_size:(index+1)*self.batch_size]
+        #create batch item list
+        x_batch_list = np.array([])
+        y_batch_list = np.array([])
+        for img_file in img_files_temp:
+            # Generate data
+            x, y = self.__data_generation(img_file)
+            np.append(x_batch_list,x)
+            np.append(y_batch_list,y)
 
-        # Generate data
-        X, y = self.__data_generation(img_files_temp)
-
-        return X, y
+        return x_batch_list, y_batch_list
 
     def __data_generation(img_file):
         #returns the properties of sound bit if the following form
