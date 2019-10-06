@@ -50,7 +50,7 @@ class DataGenerator(keras.utils.Sequence):
 
         # batch_inputs = (img_batch_list, meta_batch_list)
         # return batch_inputs #, y_batch_list
-        return np.array(meta_batch_list), np.array(y_batch_list)
+        return [np.array(img),np.array(meta_batch_list)], np.array(y_batch_list)
 
     def __data_generation(self, img_file):
         # returns the properties of sound bit if the following form
