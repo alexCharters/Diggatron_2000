@@ -54,7 +54,7 @@ flat = Flatten()(dropOut3)
 
 
 # dense layers for extra data
-extraInput = Input(shape=(2,))
+extraInput = Input(shape=(3,))
 extraDense1 = Dense(10, activation="relu")(extraInput)
 merge = concatenate([flat, extraDense1])
 
@@ -70,10 +70,10 @@ print(model.summary())
 #plot_model(model, to_file='model.png')
 
 #load data into a panda data frame
-train_meta = pd.read_csv("specs/train_metadata.csv",usecols=['Spectral_Center','Cross_Rate'])
+train_meta = pd.read_csv("specs/train_metadata.csv",usecols=['Spectral_Center','Cross_Rate', 'RMS'])
 train_outData = pd.read_csv("specs/train_metadata.csv", usecols=['Nothing','BP1','BP2'])
 
-test_meta = pd.read_csv("specs/test_metadata.csv",usecols=['Spectral_Center','Cross_Rate'])
+test_meta = pd.read_csv("specs/test_metadata.csv",usecols=['Spectral_Center','Cross_Rate', 'RMS'])
 test_outData = pd.read_csv("specs/test_metadata.csv", usecols=['Nothing','BP1','BP2'])
 # print(meta)
 # print(outData)
