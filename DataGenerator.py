@@ -1,9 +1,11 @@
+
 from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
 from keras.DateFrame import to_numpy
 
 class DataGenerator(keras.utils.Sequence):
     """Generates data for Keras."""
     def __init__(self, imgs_dir, metadata_dataframe, output_dataframe, std=None, batch_size=32, n_classes=3, shuffle=True, dim=(240, 160)):
+
         """Initialization.
         
         Args:
@@ -14,15 +16,6 @@ class DataGenerator(keras.utils.Sequence):
         self.output_dataframe = output_dataframe
         self.batch_size = batch_size
         self.dim = dim
-        if ave is None:
-            self.ave = np.zeros(n_channels)
-        else:
-            self.ave = ave
-        if std is None:
-            self.std = np.zeros(n_channels) + 1
-        else:
-            self.std = std
-        
         self.n_channels = n_channels
         self.n_classes = n_classes
         self.shuffle = shuffle
