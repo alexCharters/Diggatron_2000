@@ -39,7 +39,7 @@ class DataGenerator(keras.utils.Sequence):
         y_batch_list = np.array([])
         for img_file in img_files_temp:
             # Generate data
-            X, y = self.__data_generation(img_file)
+            x, y = self.__data_generation(img_file)
             np.append(x_batch_list,x)
             np.append(y_batch_list,y)
 
