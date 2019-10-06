@@ -77,14 +77,17 @@ print(model.summary())
 plot_model(model, to_file='model.png')
 
 #load data into a panda data frame
-meta = pd.read_csv("specs/metadata.csv",usecols=['Name','Spectral_Center','Cross_Rate'])
-outData = pd.read_csv("specs/metadata.csv", usecols=['Nothing','BP1','BP2'])
+train_meta = pd.read_csv("specs/train_metadata.csv",usecols=['Name','Spectral_Center','Cross_Rate'])
+train_outData = pd.read_csv("specs/train_metadata.csv", usecols=['Nothing','BP1','BP2'])
+
+test_meta = pd.read_csv("specs/test_metadata.csv",usecols=['Name','Spectral_Center','Cross_Rate'])
+test_outData = pd.read_csv("specs/test_metadata.csv", usecols=['Nothing','BP1','BP2'])
 # print(meta)
 # print(outData)
 
 
-training_datagen = DataGenerator('specs/train', meta, outData, batch_size=BATCH_SIZE)
-testing_datagen = DataGenerator('specs/test', meta, outData, batch_size=BATCH_SIZE)
+training_datagen = DataGenerator('specs/train', train_meta, train_outData, batch_size=BATCH_SIZE)
+testing_datagen = DataGenerator('specs/test', test_meta, test_outData, batch_size=BATCH_SIZE)
 
 
 opt = Adam(lr=INIT_LR, decay=INIT_LR/EPOCHS)
@@ -112,7 +115,7 @@ model.fit_generator(
     generator=training_datagen,
     epochs=EPOCHS,
     validation_data=testing_datagen,
-    callbacks=[checkpoint]
+    #callbacks=[checkpoint]
 )
 
 #save final weights

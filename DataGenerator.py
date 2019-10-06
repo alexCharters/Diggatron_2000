@@ -21,21 +21,31 @@ class DataGenerator(keras.utils.Sequence):
 
     def __len__(self):
         """Denotes the number of batches per epoch."""
-        return math.floor(len([name for name in os.listdir('all_samples') if os.path.isfile('all_samples'+'//'+name)])/self.batch_size)
+        #print("len: " + str(math.floor(len([name for name in os.listdir(self.imgs_dir) if os.path.isfile(self.imgs_dir+'//'+name)])/self.batch_size)-1)
+        return math.floor(len([name for name in os.listdir(self.imgs_dir) if os.path.isfile(self.imgs_dir+'//'+name)])/self.batch_size)
 
     def __getitem__(self, index):
         """Generate one batch of data."""
         # Generate indexes of the batch
         rows = self.metadata_dataframe[index*self.batch_size:(index+1)*self.batch_size]
-        print(rows.head())
+        #print(rows.head())
         names = rows['Name']
         # Find list of IDs
-        img_files_temp = [names.iloc(k) for k in range(index*self.batch_size, (index+1)*self.batch_size) if ((index+1)*self.batch_size) < row.count)]
+        print(range(index*self.batch_size, (index+1)*self.batch_size))
+        print("names len: " + str(names.count))
+        
+        rng = range(index*self.batch_size, (index+1)*self.batch_size)
+        for k in rng:
+            print("k: " + str(k))
+            names.iloc[k]
+        #img_files_temp = [names.iloc[k] for k in rng]
         #create batch item list
         x_batch_list = np.array([])
         y_batch_list = np.array([])
         for img_file in img_files_temp:
             # Generate data
+            print("IMAGE FILE:(")
+            print(img_file)
             x, y = self.__data_generation(img_file)
             np.append(x_batch_list,x)
             np.append(y_batch_list,y)
