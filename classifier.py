@@ -70,11 +70,11 @@ print(model.summary())
 #plot_model(model, to_file='model.png')
 
 #load data into a panda data frame
-train_meta = pd.read_csv("specs/train_metadata.csv",usecols=['Spectral_Center','Cross_Rate', 'RMS'])
-train_outData = pd.read_csv("specs/train_metadata.csv", usecols=['Nothing','BP1','BP2'])
+train_meta = pd.read_csv("specs/train_metadata.csv",usecols=['Name','Spectral_Center','Cross_Rate', 'RMS'])
+train_outData = pd.read_csv("specs/train_metadata.csv", usecols=['Name','Nothing','BP1','BP2'])
 
-test_meta = pd.read_csv("specs/test_metadata.csv",usecols=['Spectral_Center','Cross_Rate', 'RMS'])
-test_outData = pd.read_csv("specs/test_metadata.csv", usecols=['Nothing','BP1','BP2'])
+test_meta = pd.read_csv("specs/test_metadata.csv",usecols=['Name','Spectral_Center','Cross_Rate', 'RMS'])
+test_outData = pd.read_csv("specs/test_metadata.csv", usecols=['Name','Nothing','BP1','BP2'])
 # print(meta)
 # print(outData)
 
@@ -104,20 +104,35 @@ checkpoint = ModelCheckpoint(filepath, monitor='val_accuracy', verbose=1, save_b
 # )
 train_imgs = []
 train_metadata = []
+train_output = []
 
 test_imgs = []
 test_metadata = []
+test_output = []
 for filename in glob.glob('specs/train/*.png'):
     train_imgs.append(img_to_array(load_img(filename)))
+    train_metadata.append(train_meta.loc[train_meta['Name'] == filename.replace('\\', '/').split('/')[2]].values[0][1:])
+    train_output.append(train_outData.loc[train_outData['Name'] == filename.replace('\\', '/').split('/')[2]].values[0][1:])
 
 for filename in glob.glob('specs/test/*.png'):
     test_imgs.append(img_to_array(load_img(filename)))
+    test_metadata.append(test_meta.loc[test_meta['Name'] == filename.replace('\\', '/').split('/')[2]].values[0][1:])
+    test_output.append(test_outData.loc[test_outData['Name'] == filename.replace('\\', '/').split('/')[2]].values[0][1:])
+
+test_imgs = np.array(test_imgs)
+test_metadata = np.array(test_metadata)
+test_output = np.array(test_output)
+
+train_imgs = np.array(train_imgs)
+train_metadata = np.array(train_metadata)
+train_output = np.array(train_output)
+
 
 model.fit_generator(
-    generator=train_datagen.flow((np.array(train_imgs), train_meta), train_outData, batch_size=BATCH_SIZE),
+    generator=train_datagen.flow((train_imgs, train_metadata), train_output, batch_size=BATCH_SIZE),
     epochs=EPOCHS,
     steps_per_epoch=7,
-    validation_data=test_datagen.flow((np.array(test_imgs), test_meta), test_outData),
+    validation_data=test_datagen.flow((test_imgs, test_metadata), test_output),
     callbacks=[checkpoint]
 )
 
