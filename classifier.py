@@ -68,8 +68,8 @@ print(model.summary())
 plot_model(model, to_file='model.png')
 
 #load data into a panda data frame
-meta = pd.read_csv("metaData.csv",usecols=['Center','Rate'])
-outData = pd.read_csv("metaData.csv", usecols=['Nothing','BP1','BP2'])
+meta = pd.read_csv("specs//metaData.csv",usecols=['Center','Rate'])
+outData = pd.read_csv("specs//metaData.csv", usecols=['Nothing','BP1','BP2'])
 print(meta)
 print(outData)
 
