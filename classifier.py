@@ -36,19 +36,26 @@ BATCH_SIZE = 32
 #img = load_img('')
 # conv layers for image
 imgInput = Input(shape=(W, H, 3))
-conv2D1 = Conv2D(32, (3, 3), padding="same")(imgInput)
+
+conv2D = Conv2D(96, (11, 11), strides=4, padding="same")(imgInput)
+maxPool = MaxPooling2D(3, 2)(conv2D)
+
+conv2D1 = Conv2D(256, (5, 5), padding="same")(maxPool)
 activation1 = Activation("relu")(conv2D1)
 batchNormal1 = BatchNormalization(axis=-1)(activation1)
-maxPool1 = MaxPooling2D(pool_size=(3, 3))(batchNormal1)
+maxPool1 = MaxPooling2D(3, 2)(batchNormal1)
 dropOut1 = Dropout(rate=0.25)(maxPool1)
 
-conv2D2 = Conv2D(32, (3, 3), padding="same")(maxPool1)
-activation2 = Activation("relu")(conv2D2)
-batchNormal2 = BatchNormalization(axis=-1)(activation2)
-maxPool2 = MaxPooling2D(pool_size=(3, 3))(batchNormal2)
-dropOut2 = Dropout(rate=0.25)(maxPool2)
+conv2D2 = Conv2D(384, (3, 3), padding="same")(dropOut1)
+maxPool2 = MaxPooling2D(3, 2)(conv2D2)
 
-flat = Flatten()(maxPool2)
+conv2D3 = Conv2D(256, (3, 3), padding="same")(maxPool2)
+activation3 = Activation("relu")(conv2D3)
+batchNormal3 = BatchNormalization(axis=-1)(activation3)
+maxPool3 = MaxPooling2D(3, 2)(batchNormal3)
+dropOut3 = Dropout(rate=0.25)(maxPool3)
+
+flat = Flatten()(dropOut3)
 
 
 # dense layers for extra data
@@ -56,8 +63,8 @@ extraInput = Input(shape=(3,))
 extraDense1 = Dense(10, activation="relu")(extraInput)
 merge = concatenate([flat, extraDense1])
 
-Dense1 = Dense(1024, activation="relu")(merge)
-Dense2 = Dense(1024, activation="relu")(Dense1)
+Dense1 = Dense(4096, activation="relu")(merge)
+Dense2 = Dense(4096, activation="relu")(Dense1)
 
 output = Dense(3, activation="softmax")(Dense2)
 
@@ -68,10 +75,10 @@ print(model.summary())
 plot_model(model, to_file='model.png')
 
 #load data into a panda data frame
-meta = pd.read_csv("metaData.csv",usecols=['Center','Rate'])
-outData = pd.read_csv("metaData.csv", usecols=['Nothing','BP1','BP2'])
-print(meta)
-print(outData)
+# meta = pd.read_csv("metaData.csv",usecols=['Center','Rate'])
+# outData = pd.read_csv("metaData.csv", usecols=['Nothing','BP1','BP2'])
+# print(meta)
+# print(outData)
 
 
 

@@ -1,6 +1,8 @@
+import keras as keras
+
 class DataGenerator(keras.utils.Sequence):
     """Generates data for Keras."""
-    def __init__(self, imgs_dir, csv_dir, std=None, batch_size=32, n_classes=3, shuffle=True, dim=(240, 160)):
+    def __init__(self, imgs_dir, csv_dir, batch_size=32, n_classes=3, shuffle=True, dim=(240, 160)):
         """Initialization.
         
         Args:
@@ -11,15 +13,6 @@ class DataGenerator(keras.utils.Sequence):
         self.csv_dir = csv_dir
         self.batch_size = batch_size
         self.dim = dim
-        if ave is None:
-            self.ave = np.zeros(n_channels)
-        else:
-            self.ave = ave
-        if std is None:
-            self.std = np.zeros(n_channels) + 1
-        else:
-            self.std = std
-        
         self.n_channels = n_channels
         self.n_classes = n_classes
         self.shuffle = shuffle
