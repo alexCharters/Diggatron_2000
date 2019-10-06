@@ -7,6 +7,8 @@ from keras.layers.convolutional import Conv2D, MaxPooling2D
 from keras.layers.normalization import BatchNormalization
 from keras.optimizers import Adam
 from keras.layers.core import Activation, Flatten, Dropout, Dense
+from keras.callbacks import ModelCheckpoint
+from sklearn.metrics import classification_report, confusion_matrix
 import pandas as pd
 
 from datetime import datetime
@@ -75,26 +77,23 @@ print(model.summary())
 plot_model(model, to_file='model.png')
 
 #load data into a panda data frame
-<<<<<<< HEAD
-meta = pd.read_csv("specs//metaData.csv",usecols=['Center','Rate'])
-outData = pd.read_csv("specs//metaData.csv", usecols=['Nothing','BP1','BP2'])
-print(meta)
-print(outData)
-=======
-# meta = pd.read_csv("metaData.csv",usecols=['Center','Rate'])
-# outData = pd.read_csv("metaData.csv", usecols=['Nothing','BP1','BP2'])
+meta = pd.read_csv("metaData.csv",usecols=['Center','Rate'])
+outData = pd.read_csv("metaData.csv", usecols=['Nothing','BP1','BP2'])
 # print(meta)
 # print(outData)
->>>>>>> 584770a598816562f7b8b4c8ed563a35493eaa2f
 
 
-
+training_datagen = DataGenerator('specs/train', meta, outData, batch_size=BATCH_SIZE)
+testing_datagen = DataGenerator('specs/test', meta, outData, batch_size=BATCH_SIZE)
 
 
 opt = Adam(lr=INIT_LR, decay=INIT_LR/EPOCHS)
 model.compile(loss='categorical_crossentropy',
               optimizer=opt,
               metrics=['accuracy'])
+
+filepath="weights-improvement-{epoch:02d}-{val_accuracy:.2f}.hdf5"
+checkpoint = ModelCheckpoint(filepath, monitor='val_accuracy', verbose=1, save_best_only=True, mode='max')
 
 # train_generator = train_datagen.flow_from_directory(
 #     'specs/train',
@@ -109,33 +108,22 @@ model.compile(loss='categorical_crossentropy',
 # )
 
 
-# model.fit(
-#     x=[train_generator, train_metadata],
-#     y=train_output,
-#     epochs=EPOCHS,
-#     batch_size=BATCH_SIZE,
-#     validation_data=([test_generator, test_metadata],test_output)
-# )
+model.fit_generator(
+    generator=training_datagen,
+    epochs=EPOCHS,
+    batch_size=BATCH_SIZE,
+    validation_data=testing_datagen,
+    callbacks=[checkpoint]
+)
 
+#save final weights
 now = datetime.now()
 model.save_weights('final_weights_'+now.strftime("%m_%d_%Y_%H_%M_%S")+'.h5')
 
+# evaluating model
 
-def generate_generator_multiple(generator,images_dir, dir2, batch_size, img_height,img_width):
-    genX1 = generator.flow_from_directory(dir1,
-                                          target_size = (img_height,img_width),
-                                          class_mode = 'categorical',
-                                          batch_size = batch_size,
-                                          shuffle=False, 
-                                          seed=7)
-    
-    genX2 = generator.flow_from_dataframe(dir2,
-                                          target_size = (img_height,img_width),
-                                          class_mode = 'categorical',
-                                          batch_size = batch_size,
-                                          shuffle=False, 
-                                          seed=7)
-    while True:
-            X1i = genX1.next()
-            X2i = genX2.next()
-            yield [X1i[0], X2i[0]], X2i[1]  #Yield both images and their mutual label
+# run on testing data
+Y_pred = model.predict_generator(validation_generator, num_of_test_samples // BATCH_SIZE+1)
+y_pred = np.argmax(Y_pred, axis=1)
+
+#print(confusion_matrix([, , ], y_pred))

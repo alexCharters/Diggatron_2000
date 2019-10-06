@@ -1,10 +1,12 @@
 import os
+import keras
 from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
-from keras.DateFrame import to_numpy
+import pandas as pd
+import numpy as np
 
 class DataGenerator(keras.utils.Sequence):
     """Generates data for Keras."""
-    def __init__(self, imgs_dir, metadata_dataframe, output_dataframe, std=None, batch_size=32, n_classes=3, shuffle=True, dim=(240, 160)):
+    def __init__(self, imgs_dir, metadata_dataframe, output_dataframe, batch_size=32):
 
         """Initialization.
         
@@ -15,34 +17,28 @@ class DataGenerator(keras.utils.Sequence):
         self.metadata_dataframe = metadata_dataframe
         self.output_dataframe = output_dataframe
         self.batch_size = batch_size
-        self.dim = dim
-        self.n_channels = n_channels
-        self.n_classes = n_classes
-        self.shuffle = shuffle
-        self.on_epoch_end()
 
     def __len__(self):
         """Denotes the number of batches per epoch."""
-        return len(name for name in os.listdir(self.imgs_dir) if os.path.isfile(slef.imgs_dir+'//'+name))
+        return math.floor(len([name for name in os.listdir('all_samples') if os.path.isfile('all_samples'+'//'+name)])/self.batch_size)
 
     def __getitem__(self, index):
         """Generate one batch of data."""
         # Generate indexes of the batch
-        indexes = self.indexes[index*self.batch_size:(index+1)*self.batch_size]
-
+        rows = self.metadata_dataframe[index*self.batch_size:(index+1)*self.batch_size]
+        names = rows['Name']
         # Find list of IDs
-        img_files_temp = [self.img_files[k] for k in indexes]
+        img_files_temp = [names.iloc(k) for k in index*self.batch_size:(index+1)*self.batch_size]
+        #create batch item list
+        x_batch_list = np.array([])
+        y_batch_list = np.array([])
+        for img_file in img_files_temp:
+            # Generate data
+            x, y = self.__data_generation(img_file)
+            np.append(x_batch_list,x)
+            np.append(y_batch_list,y)
 
-        # Generate data
-        X, y = self.__data_generation(img_files_temp)
-
-        return X, y
-
-    def on_epoch_end(self):
-        """Updates indexes after each epoch."""
-        self.indexes = np.arange(len(self.img_files))
-        if self.shuffle == True:
-            np.random.shuffle(self.indexes)
+        return x_batch_list, y_batch_list
 
     def __data_generation(img_file):
         #returns the properties of sound bit if the following form
