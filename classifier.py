@@ -75,17 +75,10 @@ print(model.summary())
 plot_model(model, to_file='model.png')
 
 #load data into a panda data frame
-<<<<<<< HEAD
-meta = pd.read_csv("specs//metaData.csv",usecols=['Center','Rate'])
-outData = pd.read_csv("specs//metaData.csv", usecols=['Nothing','BP1','BP2'])
-print(meta)
-print(outData)
-=======
-# meta = pd.read_csv("metaData.csv",usecols=['Center','Rate'])
+# meta = pd.read_csv("metaData.csv",usecols=['Name','Center','Rate'])
 # outData = pd.read_csv("metaData.csv", usecols=['Nothing','BP1','BP2'])
 # print(meta)
 # print(outData)
->>>>>>> 584770a598816562f7b8b4c8ed563a35493eaa2f
 
 
 
