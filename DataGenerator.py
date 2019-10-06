@@ -1,6 +1,7 @@
 import os
 import keras
 import math
+import threading
 from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
 import pandas as pd
 import numpy as np
@@ -27,18 +28,12 @@ class DataGenerator(keras.utils.Sequence):
     def __getitem__(self, index):
         """Generate one batch of data."""
         # Generate indexes of the batch
-        rows = self.metadata_dataframe[index*self.batch_size:(index+1)*self.batch_size]
-        #print(rows.head())
+        rows = self.metadata_dataframe.iloc[index*self.batch_size:(index+1)*self.batch_size]
         names = rows['Name']
-        # Find list of IDs
-        print(range(index*self.batch_size, (index+1)*self.batch_size))
-        print("names len: " + str(names.count))
         
         rng = range(index*self.batch_size, (index+1)*self.batch_size)
-        for k in rng:
-            print("k: " + str(k))
-            names.iloc[k]
-        #img_files_temp = [names.iloc[k] for k in rng]
+        print(threading.activeCount())
+        img_files_temp = [names.iloc[k:] for k in rng]
         #create batch item list
         x_batch_list = np.array([])
         y_batch_list = np.array([])
